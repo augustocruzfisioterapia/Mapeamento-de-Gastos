@@ -9,14 +9,22 @@
   "theme_color": "#0f3b5e",
   "icons": [
     {
-      "src": "https://via.placeholder.com/192x192/0f3b5e/facc15?text=MG",
+      "src": "https://cdn-icons-png.flaticon.com/512/2331/2331966.png",
       "sizes": "192x192",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any"
     },
     {
-      "src": "https://via.placeholder.com/512x512/0f3b5e/facc15?text=MG",
+      "src": "https://cdn-icons-png.flaticon.com/512/2331/2331966.png",
       "sizes": "512x512",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/2331/2331948.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
     }
   ]
 }
