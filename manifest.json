@@ -1,0 +1,22 @@
+{
+  "name": "Mapeamento de Gastos",
+  "short_name": "Mapeamento",
+  "description": "Controle financeiro pessoal com gráficos e análise de gastos",
+  "start_url": "/Mapeamento-de-Gastos/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#f4f7fc",
+  "theme_color": "#0f3b5e",
+  "icons": [
+    {
+      "src": "https://via.placeholder.com/192x192/0f3b5e/facc15?text=MG",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "https://via.placeholder.com/512x512/0f3b5e/facc15?text=MG",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
