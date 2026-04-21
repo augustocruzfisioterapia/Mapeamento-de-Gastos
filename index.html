@@ -524,10 +524,15 @@
             }
         }
 
-        function initGoogleAPI() {
-            console.log('Iniciando Google API...');
-            gapi.load('client', async () => {
-                console.log('GAPI client carregado');
+        function initGoogleAPI(){
+    console.log('Iniciando Google API...');
+    if (typeof gapi === 'undefined') {
+        console.log('GAPI não carregou, tentando novamente em 1s...');
+        setTimeout(initGoogleAPI, 1000);
+        return;
+    }
+    gapi.load('client', async ()=>{
+        console.log('GAPI client carregado!');
                 try {
                     await gapi.client.init({
                         apiKey: API_KEY,
@@ -977,10 +982,19 @@
         });
 
         // INICIALIZAÇÃO CORRIGIDA
-        setTimeout(() => {
-            initGoogleAPI();
-        }, 3000);
-        renderTudo();
+       let tentativas = 0;
+function tentarIniciarAPI() {
+    if (tentativas < 5) {
+        tentativas++;
+        console.log(`Tentativa ${tentativas} de iniciar API...`);
+        setTimeout(initGoogleAPI, 4000);
+    } else {
+        console.log('API não carregou após 5 tentativas. Recarregue a página.');
+        showToast('Erro ao carregar Google API. Recarregue a página.', false);
+    }
+}
+tentarIniciarAPI();
+renderTudo();
     })();
 </script>
 </body>
